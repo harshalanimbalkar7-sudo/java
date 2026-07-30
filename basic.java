@@ -59,3 +59,47 @@ class basic {
         }
     }
 }
+
+import java.util.Scanner;
+
+class Employee {
+    String name;
+    double salary;
+
+    // Method to accept employee details
+    void accept() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Employee Name: ");
+        name = sc.nextLine();
+
+        System.out.print("Enter Salary: ");
+        salary = sc.nextDouble();
+        sc.nextLine(); // Clear buffer
+    }
+
+    // Method to display employee details
+    void display() {
+        System.out.println("Name   : " + name);
+        System.out.println("Salary : " + salary);
+    }
+
+    public static void main(String[] args) {
+
+        Employee emp[] = new Employee[5];
+
+        // Accept details of 5 employees
+        for (int i = 0; i < 5; i++) {
+            System.out.println("\nEnter Details of Employee " + (i + 1));
+            emp[i] = new Employee();
+            emp[i].accept();
+        }
+
+        // Display details of 5 employees
+        System.out.println("\nEmployee Information");
+        for (int i = 0; i < 5; i++) {
+            System.out.println("\nEmployee " + (i + 1));
+            emp[i].display();
+        }
+    }
+}
