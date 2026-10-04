@@ -1,41 +1,40 @@
-import java.util.Scanner;
 public class Student {
     int rollno;
     String name;
-    double CGPA;
+    double cgpa;
     public Student(){
         rollno=0;
         name="";
-        CGPA=0.0;
+        cgpa=0;
     }
-    public Student(int rollno, String name,double CGPA){
+    public Student(int rollno, String name, double cgpa){
         this.rollno=rollno;
         this.name=name;
-        this.CGPA=CGPA;
+        this.cgpa=cgpa;
     }
-    public void accept(){
+    /*public void accpt(){
         Scanner sc=new Scanner(System.in);
-        System.out.println("Enter roll no:");
-        rollno=sc.nextInt();
+        System.out.println("Enter roll no");
+        int rollno=sc.nextInt();
         sc.nextLine();
-        System.out.println("enter name:");
-        name=sc.nextLine();
-        System.out.println("Enetr CGPA:");
-        CGPA=sc.nextDouble();
-    }
+        System.out.println("Enter name:");
+        String name=sc.nextLine();
+        System.out.println("Enter CGPA");
+        double cgpa=sc.nextDouble();
+    }*/
     public String toString(){
-        return "Roll no:" + rollno +
-        "\nName:" + name + 
-        "\nGPA:" + CGPA;
+        return "Roll no:" + rollno + 
+        "\nName:"+ name + 
+        "\nCGPA:" + cgpa;
     }
     public static void main(String[] args) {
         Student s1=new Student();
-        s1.accept();
-        Student s2=new Student(101,"hasrhala",8.45);
-        System.err.println("student 1");
-        System.err.println(s1);
-        System.err.println("\nstudent 2");
-        System.err.println(s2);
-     
+       // s1.accpt();
+        Student s2=new Student( 101,"charu",8.45);
+        System.out.println("Student 1:");
+        System.out.println(s1);
+        System.out.println("Student 2:");
+        System.out.println(s2);
+
     }
 }
